@@ -23,7 +23,7 @@ def initConfig():
 def sendMessage(spoof, smsMessage, phoneNumber):
     messageUrl = "https://rest.clicksend.com/v3/sms/send"
     messageBody = {"messages":[{"source":"dashboard","from":spoof,"body":smsMessage,"schedule":None,"to":phoneNumber}]}
-    messageHeaders = {"authority": "rest.clicksend.com", "method": "POST", "path": "/v3/sms/send", "accept": "application/json, text/plain, /", "authorization": "Bearer ecb129908e201c3fe2431d6f2ee13c628c0e7153b2cbc02d755f4f47ac9c74f22", "content-length": "102", "content-type": "application/json", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"}
+    messageHeaders = {"authority": "rest.clicksend.com", "method": "POST", "path": "/v3/sms/send", "accept": "application/json, text/plain, /", "authorization": "Bearer U21pdGhKb2huOnNpNkFFQTpaRS5peXkhTg==", "content-length": "102", "content-type": "application/json", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"}
 
     message = requests.post(messageUrl, data = json.dumps(messageBody), headers = messageHeaders)
 
